@@ -1,0 +1,32 @@
+<ion-view view-title="Login" align-title="left">
+    <ion-content class="login-body">
+        <div class="login-logo tcenter padding">
+            <img src="img/logo-login.png">
+        </div>
+        <div class="padding">
+            <p class="tcenter no-margin">App Version: {{appVersion}}</p>
+        </div>
+        <div class="list">
+            <form name="Login_Form" class="login-form padding">
+                <span class="form-control login-item-error " ng-show="isShow"></span>
+
+                <span class="form-control login-item-error " ng-show="!Login_Form.Password.$error.required && !Login_Form.Password.$error.minlength && !Login_Form.Password.$error.maxlength && Login_Form.Password.$error.pattern && Login_Form.Password.$dirty">password required</span><br>
+
+                <span class="form-control login-item-error " ng-show="!Login_Form.Username.$error.required && (Login_Form.Username.$error.minlength || Login_Form.Username.$error.maxlength) && Login_Form.Username.$dirty">Invalid Username</span>
+                <span class="form-control login-item-error " ng-show="!Login_Form.Username.$error.required && !Login_Form.Username.$error.minlength && !Login_Form.Username.$error.maxlength && Login_Form.Username.$error.pattern && Login_Form.Username.$dirty"> Username must be alpha numeric only</span>
+                <!-- <ion-md-input placeholder="API URL" highlight-color="balanced" type="text" ng-model="loginObj.ApiUrl" name="ApiUrl"></ion-md-input> -->
+                <ion-md-input placeholder="Username" highlight-color="balanced" type="text" ng-model="loginObj.username" ng-minlength="1"
+                    ng-maxlength="15" name="Username" required ng-pattern="/^[a-zA-Z0-9]*$/"></ion-md-input>
+                <ion-md-input placeholder="Password" highlight-color="energized" type="password" ng-model="loginObj.password" ng-minlength="5"
+                    ng-maxlength="15" name="Password" required></ion-md-input>
+            </form>
+        </div>
+        <div class="padding-l-r-16">
+            <!--<a class="tleft color-white link">Forgot Password</a>-->
+        </div>
+        <div class="padding tcenter">
+            <button ng-click="login(loginObj)" class="button button-stable button-primary">Log in</button>
+        </div>
+
+    </ion-content>
+</ion-view>

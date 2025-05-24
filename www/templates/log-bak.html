@@ -1,0 +1,106 @@
+<ion-view view-title="Sync Orders">
+        <ion-content class="login-body-color">
+                <div class="row row-fixedPosition">
+                        <div class="col col-responsive-20">
+                                <!--<ul class="search-inn">
+                                        <li class="search-inn-mm" ng-class="searchText?'searchtxt-rm':''"><input type="text" placeholder="Search" ng-model="searchText" class="orderlist-search-input" /></li>
+                                        <li>
+                                                <div class="search-inn-mm-btn"><i ng-show="searchText" class="fa fa-times-circle-o" ng-click="searchText = ''"
+                                                                aria-hidden="true"></i></div>
+                                        </li>
+                                </ul>-->
+                        </div>
+                </div>
+
+                <div class="row row-padd-10 orderlist-rowfixed main-div-list-1" style="height:2%; ">
+                        <!--<div class="col tcenter col-25 border-column no-border top-border heading-row">Order ID</div>-->
+                        <div class="col tcenter col-100 border-column no-border top-border heading-row">Credit</div>
+
+
+                        <!--<div class="col tcenter col-25 border-column top-border heading-row">Item Qty</div>-->
+                </div>
+                <div class="col col-responsive-20" style="height:7%;"></div>
+
+                <div class="row row-padd orderlist-rowfixed main-div-list-2" style="height:10%;">
+                        <!--<div class="col tcenter col-25 border-column no-border top-border heading-row">Order ID</div>-->
+                        <div class="col tcenter col-33 border-column no-border top-border heading-row">DownloadSeq</div>
+                        <div class="col tcenter col-33 border-column no-border top-border heading-row">Facility Code</div>
+                        <div class="col tcenter col-33 border-column no-border top-border heading-row">ResultMessage</div>
+
+                        <!--<div class="col tcenter col-25 border-column top-border heading-row">Item Qty</div>-->
+                </div>
+
+                <div class="row row-padd orderlist-rowfixed main-div-list-2" style="height:7%;" ng-repeat="credit in responseArrayCredit">
+                        <!--<div class="col tcenter col-25 border-column no-border top-border heading-row">Order ID</div>-->
+                        <div class="col tcenter col-35 border-column no-border top-border heading-row">{{credit.DownloadSeq}}</div>
+                        <div class="col tcenter col-35 border-column no-border top-border heading-row">{{credit.FacilityCode}}</div>
+                        <div class="col tcenter col-35 border-column no-border top-border heading-row">{{credit.ResultMessage}}</div>
+                        <div ng-repeat="creditItms in credit.CreditList">
+                                <div class=" row responsive-sm ">
+                                        <div class="col ">
+                                                <div class="order_details ">
+                                                        <p>Resident ID: {{creditItms.ResID}}</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row responsive-sm orderlist_row tabel-responsive ">
+                                        <table class="rwd-table orderlist-responsive-table ">
+                                                <tr class="order-headings ">
+                                                        <th>ItemNumber</th>
+                                                        <th>IsPAK</th>
+                                                        <th>CreditQuantity</th>
+                                                        <th>InReceipts</th>
+                                                        <th>ItemResultMessage</th>
+                                                </tr>
+                                                <tr class="columns-single row-fourth-text " style="background-color: #ffffff;  "ng-repeat="item in creditItms.ItemList ">
+                                                        <td data-th="Movie Title ">{{item.ItemNumber}}</td>
+                                                        <td data-th="Genre ">{{item.IsPAK}}</td>
+                                                        <td data-th="Genre ">{{item.CreditQuantity}}</td>
+                                                        <td data-th="Genre ">{{item.InReceipts}}</td>
+                                                        <td data-th="Genre ">{{item.ItemResultMessage}}</td>
+                                                </tr>
+                                        </table>
+                                </div>
+                        </div>
+                        <!--<div class="col tcenter col-25 border-column top-border heading-row ">Item Qty</div>-->
+                </div>
+
+                <div class="col col-responsive-20 " style="height:15%; "></div>
+
+                <div class="row row-padd orderlist-rowfixed main-div-list-1 " style="height:10%; ">
+                        <!--<div class="col tcenter col-25 border-column no-border top-border heading-row ">Order ID</div>-->
+                        <div class="col tcenter col-100 border-column no-border top-border heading-row ">Orders Sync</div>
+
+
+                        <!--<div class="col tcenter col-25 border-column top-border heading-row ">Item Qty</div>-->
+                </div>
+
+                <div class="row row-padd orderlist-rowfixed main-div-list-2 " style="height:7%; ">
+                        <!--<div class="col tcenter col-25 border-column no-border top-border heading-row ">Order ID</div>-->
+                        <div class="col tcenter col-35 border-column no-border top-border heading-row "></div>
+                        <div class="col tcenter col-35 border-column no-border top-border heading-row "></div>
+                        <div class="col tcenter col-35 border-column no-border top-border heading-row "></div>
+
+                        <!--<div class="col tcenter col-25 border-column top-border heading-row ">Item Qty</div>-->
+                </div>
+
+
+                <div class="creditlist-columns ordr-lst ">
+
+                        <div class="row row-padd " ng-repeat="order in orderList | filter:searchText track by $index ">
+                                <!--<div class="col tcenter col-25 border-column no-border row-fourth-text text-dec
+                                " ng-class="order.isOrdered==='1' ? 'lightgreen':order.isOrdered==='2' ? 'yellow': 'White' ">{{order.OrderID}}</div>-->
+
+                                <div ng-if="order.isOrdered==='1' " class="col tcenter col-50 border-column no-border row-fourth-text
+                                " ng-class="order.isOrdered==='1' ? 'lightgreen':order.isOrdered==='2' ? 'yellow': 'White' ">{{order.ResID}}</div>
+                                <div ng-if="order.isOrdered !=='1' " class="col tcenter col-50 border-column no-border
+                                row-fourth-text text-dec " ng-click="goToOrderDetails(order.ResID,order.OrderID) " ng-class="order.isOrdered==='1' ? 'lightgreen':order.isOrdered==='2' ? 'yellow':
+                                'White' ">{{order.ResID}}</div>
+                                <div class="col tcenter col-50 border-column no-border row-fourth-text " ng-class="order.isOrdered==='1'
+                                ? 'lightgreen':order.isOrdered==='2' ? 'yellow': 'White' ">{{order.Location}}</div>
+                                <!--<div class="col tcenter col-25 border-column no-border row-fourth-text " ng-class="order.isOrdered==='1'
+                                ? 'lightgreen':order.isOrdered==='2' ? 'yellow': 'White' ">{{order.itemCount}}</div>-->
+                        </div>
+                </div>
+        </ion-content>
+</ion-view>

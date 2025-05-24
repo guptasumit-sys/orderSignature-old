@@ -1,0 +1,34 @@
+<ion-view view-title="Credit List">
+    <ion-content class="login-body-color">
+        <div class="row row-fixedPosition">
+
+
+            <div class="col col-responsive-20">
+                <ul class="search-inn">
+                    <li class="search-inn-mm" ng-class="searchText?'searchtxt-rm':''"><input type="text" placeholder="Search" ng-model="searchText" class="orderlist-search-input" /></li>
+                    <li>
+                        <div class="search-inn-mm-btn"><i ng-show="searchText" class="fa fa-times-circle-o" ng-click="searchText = ''" aria-hidden="true"></i></div>
+                    </li>
+                </ul>
+
+            </div>
+
+
+
+        </div>
+        <div class="row row-padd orderlist-rowfixed main-div-list-2">
+            <div class="col tcenter col-25 border-column no-border top-border heading-row">Order ID</div>
+            <div class="col tcenter col-25 border-column no-border top-border heading-row">Resident</div>
+            <div class="col tcenter col-25 border-column no-border top-border heading-row">Location</div>
+            <div class="col tcenter col-25 border-column top-border heading-row">Credit Items</div>
+        </div>
+        <div class="creditlist-columns ordr-lst">
+            <div class="row row-padd" ng-repeat="credit in creditList | filter:searchText track by $index">
+                <div ui-sref="app.creditDetail({ResID:credit.ResID,DeliveryID:credit.DeliveryID})" class="col tcenter col-25 border-column no-border row-fourth-text text-dec  yellow">{{credit.DeliveryID}}</div>
+                <div class="col tcenter col-25 border-column no-border row-fourth-text yellow">{{credit.ResID}}</div>
+                <div class="col tcenter col-25 border-column no-border row-fourth-text yellow">{{credit.Location}}</div>
+                <div class="col tcenter col-25 border-column no-border row-fourth-text yellow">{{credit.CreditItems}}</div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

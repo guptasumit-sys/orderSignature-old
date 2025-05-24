@@ -1,0 +1,81 @@
+<ion-view view-title="Order Details">
+    <ion-content class="login-body">
+        <div class="row responsive-sm">
+            <div class="col">
+
+                <div class="order_details">
+                    <!-- <select class="order_detail-dropbox" name="residents" ng-show="isMultipleResiden" ng-model="selectedOrder" ng-change="selecteOrderID(selectedOrder)">
+            <option ng-repeat="order in orderHeaders">{{order.OrderID}}</option>
+        </select> -->
+                    <p style="font-size: 22px;margin-bottom:10px">Order Receipt: {{orderHeader.OrderReceipt}}</p>
+                    <p ng-if="ScannedID">Scanned Receipt: {{ScannedID}}</p>
+                    <p>Delivery ID: {{orderHeader.DeliveryID}}</p>
+                    <p>Booking ID: {{orderHeader.ResID}}</p>
+                    <p>Resident Name: {{itemDetails[0].FirstName}} {{itemDetails[0].LastName}}</p>
+                    <p>Location: {{itemDetails[0].Location}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row responsive-sm orderlist_row tabel-responsive">
+            <table class="rwd-table orderlist-responsive-table">
+                <tr class="order-headings">
+                    <th>Item Detail</th>
+                    <th>Qty</th>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;Credit&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th ng-if="false">Re-Deliver</th>
+                </tr>
+                <tr class="columns-single row-fourth-text" style="background-color: #ffffff;" ng-repeat="item in itemDetails">
+                    <td data-th="Movie Title">{{item.ItemName}}</td>
+                    <td data-th="Genre">{{item.OrderQuantity}}</td>
+                    <td data-th="Year">
+                        <select class="order_detail-dropbox" ng-model="item.credit" ng-change="setCredit(item.credit,item.ItemNumber,orderHeader.ResID,orderHeader.DeliveryID)" ng-disabled="item.creditDropdownDisable == true ? true : false;">
+             <option ng-repeat="credit in array(item.OrderQuantity,item.redelivery)"  >{{credit}}</option>       
+             <!-- ng-selected="maxCredit? item.OrderQuantity : item.credit"            -->
+            </select>
+                    </td>
+                    <td data-th="Year" ng-if="false">
+                        <select class="order_detail-dropbox" ng-model="item.redelivery" ng-change="setRedelivery(item.redelivery,item.ItemNumber,orderHeader.ResID,orderHeader.DeliveryID)" ng-disabled="item.redeliveryDropdownDisable == true ? true : false;"> 
+             <option ng-repeat="redelivery in array(item.OrderQuantity,item.credit)" >{{redelivery}}</option>
+              <!-- ng-selected="maxRedeliver? item.OrderQuantity : item.redelivery " -->
+            </select>
+                    </td>
+                </tr>
+
+
+            </table>
+        </div>
+
+        
+        <div ng-if="orderHeader.Confirmation !=  '*** Undelivered' " class="row">
+            <img id='signatureCanvas' ng-src="data:image/png;base64,{{orderHeader.Confirmation}}" class="order-canvas-width" style='margin-top: 0px !important;border: 1px solid black;margin-bottom: 0px !important;'></img>
+        </div>
+
+        <div class="row responsive-sm tcenter btnBarGroup">
+            <!-- Resident  -->
+            <!-- <div class="btn1grp">
+                <button class="button button-assertive btn-bluebar" ui-sref="appSign.residentSign({'ResID':orderHeader.ResID,'OrderID':orderHeader.OrderID})">Signature </button>
+
+                <button class="button button-assertive btn-bar" ng-click="creditAll(orderHeader.ResID)" ng-disabled="btnDisabled"> Credit All </button>
+            </div>
+            <div class="btn2grp">
+                <button class="button button-assertive btn-bar " ng-click="redeliverAll(orderHeader.ResID)" ng-disabled="btnDisabled"> Re-Deliver All </button>
+
+                <button class="button button-assertive btn-bar" ng-click="notDelivered()"> Not Delivered </button>
+            </div> -->
+            <div class="btn1grp">   
+                 <button class="button button-assertive btn-bluebar" ng-click="isGoToOrderList()">Back To {{btnText}} </button>
+                 <button class="button button-assertive btn-bluebar" ng-click="goToSignature(orderHeader.ResID,orderHeader.DeliveryID)" ng-disabled="btnSignatureDisabled">Signature </button>    
+                  </div>
+            <div class="btn2grp">
+               <button class="button button-assertive btn-bar" ng-click="creditAll(orderHeader.ResID,orderHeader.DeliveryID)" ng-disabled="btnCreditDisabled"> Credit All </button>       
+                <!-- <button class="button button-assertive btn-bar " ng-click="redeliverAll(orderHeader.ResID,orderHeader.DeliveryID)" ng-disabled="btnRedeliverDisabled  || checkRedeliver || btnRedeliveryDisabled"> Re-Deliver All </button> -->
+            </div>
+        </div>
+
+        
+        <!-- <div class="row responsive-sm tcenter">
+            <button class="button button-assertive btn-signature" ng-click="isGoToOrderList()">Back To {{btnText}} </button>
+        </div> -->
+        
+    </ion-content>
+</ion-view>

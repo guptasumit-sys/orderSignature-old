@@ -1,0 +1,45 @@
+<ion-view view-title="Order Details">
+    <ion-content class="login-body">
+        <div class="row responsive-sm">
+            <div class="col">
+                <div class="order_details">
+                    <p style="font-size: 22px;margin-bottom:10px">Order Receipt: {{orderHeader.OrderReceipt}}</p>
+                    <p>Order ID: {{orderHeader.DeliveryID}}</p>
+                    <p>Booking ID: {{orderHeader.ResID}}</p>
+                    <p>Resident Name: {{itemDetails[0].FirstName}} {{itemDetails[0].LastName}}</p>
+                    <p>Location: {{itemDetails[0].Location}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row responsive-sm orderlist_row tabel-responsive">
+            <table class="rwd-table orderlist-responsive-table">
+                <tr class="order-headings">
+                    <th>Item Detail</th>
+                    <th>Qty</th>
+                    <th>Credit</th>
+                    <!-- <th>Redelivery</th> -->
+                </tr>
+                <tr class="columns-single row-fourth-text" style="background-color: #ffffff;" ng-repeat="item in itemDetails">
+                    <td data-th="Movie Title">{{item.ItemName}}</td>
+                    <td data-th="Genre">{{item.OrderQuantity}}</td>
+                    <td data-th="Genre">{{item.credit}}</td>
+                    <!-- <td data-th="Genre">{{item.redelivery}}</td> -->
+                    <!--<td data-th="Year">
+
+                   <select class="order_detail-dropbox" ng-model="credit">
+             <option value="item.credit" selected="selected"></option>
+            </select>
+                    </td>-->
+                </tr>
+
+
+            </table>
+        </div>
+        <div class="row">
+            <img id='signatureCanvas' ng-src="data:image/png;base64,{{image}}" class="order-canvas-width" style='margin-top: 0px !important;border: 1px solid black;margin-bottom: 0px !important;'></img>
+        </div>
+        <div class="row responsive-sm tcenter">
+            <button class="button button-assertive btn-signature"  ng-click="isGoToOrderList()">Back to {{btnText}}</button>
+        </div>
+    </ion-content>
+</ion-view>

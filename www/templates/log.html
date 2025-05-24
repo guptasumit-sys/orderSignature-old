@@ -1,0 +1,46 @@
+<style>
+        .exp-btn {
+                position: absolute;               
+                right: 10px !important;
+                top: -20px;
+        }
+</style>
+<ion-view view-title="Sync Logs">
+        <ion-content class="login-body-color">
+
+
+                <div class="col col-responsive-20">
+                        <ul class="search-inn">
+                                <li class="search-inn-mm">
+                                        <input type="text" placeholder="Recipients" ng-model="sendTo" class="orderlist-search-input" style="width: 81% !important;"
+                                        />
+                                        <button class="button button-assertive btn-signature exp-btn" ng-click="sendMail(sendTo)" style="float: right; min-height: 35px !important;height : 35px !important; width:15%"><i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i></button>
+                                </li>
+                        </ul>
+                </div>
+                <div class="row responsive-sm orderlist_row tabel-responsive ">
+                        <table class="rwd-table orderlist-responsive-table ">
+                                <tr class="order-headings ">
+                                        <th>View</th>
+                                        <th>API</th>
+                                        <th>DownloadSeq</th>
+                                        <th>FacilityCode</th>
+                                        <th>ResponseTime(second)</th>
+                                </tr>
+                                <tr class="columns-single row-fourth-text " style="background-color: #ffffff;  " ng-repeat="lg in log track by $index" ng-click="logDetail(lg.Response,lg.RequestTime)">
+                                        <td data-th="Genre"><i class="fa fa-eye" aria-hidden="true"></i></td>
+                                        <td data-th="Genre">{{lg.API}}</td>
+                                        <td data-th="Genre">{{lg.DownloadSeq}}</td>
+                                        <td data-th="Genre">{{lg.FacilityCode}}</td>
+                                        <td data-th="Genre">{{lg.ResponseTime}}</td>
+                                </tr>
+                        </table>
+
+
+
+                </div>
+                <div class="col col-responsive-20">
+                                <button class="button button-assertive" ng-click="ClearLog()" style="float: right; min-height: 35px !important;height : 35px !important; width:22%">Clear Log</button>
+                        </div>
+        </ion-content>
+</ion-view>

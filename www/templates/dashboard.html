@@ -1,0 +1,146 @@
+<ion-view view-title="Dashboard">
+    <ion-content class="login-body">
+        <div class="container-dashboard">
+
+
+            <div class="col drop-btn-main">
+                <div class="list-position">
+
+
+                    <!-- <div class="dropdown" ng-hide="true">
+                        <button ng-click="toggleDropDown()" class="dropbtn">{{selectedFac}}<i class="drop-padd fa fa-caret-down" aria-hidden="true"></i></button>
+                        <div class="dropdown-content" ng-class="{'show':isShowDD}">
+                            <a ng-click="setAppdata('Facility Select...')">Facility Select...</a>
+                            <a ng-click="setAppdata('All')">All</a>
+                            <a data-ng-repeat="facility in facilities track by $index" ng-click="setAppdata(facility.FacilityName)">{{facility.FacilityName}}</a>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+            <div class="row responsive-sm order-list-row orderList-show-row">
+
+                <div class="col col-orderlist-padd order-list-columns" ng-click="gotoDownload()" ng-disabled="downloadDisable">
+                    <div class="order-item">
+                        <div class="order-list">
+                            <i class="fa fa-arrow-down i-arrow-down fa-5x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Download</h3>
+                    </div>
+                </div>
+
+                <div class="col order-list-columns" ng-click="gotoScan()">
+                    <div class="order-item">
+                        <div class="order-list">
+                            <i class="fa fa-barcode i-barcode fa-5x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Scan</h3>
+                    </div>
+                </div>
+
+                <div class="col order-list-columns" ng-click="gotoOrderList()">
+                    <div class="order-item">
+                        <div class="order-list">
+                            <i class="fa fa-list-alt fa-5x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Order List</h3>
+                    </div>
+                </div>
+
+                <div class="col order-list-columns" ng-click="gotoCreditList()" ng-disabled="CreditOrders">
+                    <div class="order-item">
+                        <div class="order-list">
+                            <i class="fa fa-usd fa-5x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Credits</h3>
+                    </div>
+                </div>
+
+                <div ng-hide="true" class="col col-orderlist order-list-columns" ng-click="delivery()"> 
+                    <!--ng-hide="isRedeliverFalse || creditHide"-->
+                    <div class="order-item">
+                        <div class="order-list">
+                            <i class="fa fa-truck fa-5x i-primary-delivery" aria-hidden="true"></i>
+                            <!--<img src="img/Delivery.png" class="img-delivery">-->
+                        </div>
+                        <h3>Redeliver</h3>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row responsive-sm order-list-row orderlist-hide-rows">
+
+                <div class="col col-50 col-orderlist-padd order-list-columns" ng-click="gotoDownload()" ng-disabled="downloadDisable">
+                    <div class="order-item">
+                        <div class="order-list">
+                            <i class="fa fa-arrow-down i-arrow-down fa-5x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Download</h3>
+                    </div>
+                </div>
+
+                <div class="col col-50 col-orderlist-padd order-list-columns" ng-click="gotoScan()">
+                    <div class="order-item">
+                        <div class="order-list">
+                            <i class="fa fa-barcode i-barcode fa-5x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Scan</h3>
+                    </div>
+                </div>
+
+
+
+                <!--</div>-->
+
+
+                <!--<div class="row responsive-sm order-list-row orderlist-hide-rows orderlist-sec-hide-row">-->
+
+
+                <div class="col col-50 col-orderlist-padd order-list-columns" ng-click="gotoOrderList()">
+                    <div class="order-item">
+                        <div class="order-list">
+                            <i class="fa fa-list-alt fa-5x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Order List</h3>
+                    </div>
+                </div>
+
+                <div class="col col-50 col-orderlist-padd order-list-columns" ng-click="gotoCreditList()" ng-disabled="!CreditOrders">
+                    <div class="order-item">
+                        <div class="order-list">
+                            <i class="fa fa-usd fa-5x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Credits</h3>
+                    </div>
+                </div>
+
+                <div ng-hide="true" class="col col-50 col-orderlist-padd order-list-columns" ng-click="delivery()">
+                    <div class="order-item">
+                        <div class="order-list">
+                            <!--<img src="img/Delivery.png" class="img-delivery">-->
+                            <i class="fa fa-truck fa-5x i-primary-delivery" aria-hidden="true"></i>
+                        </div>
+                        <h3>Redeliver</h3>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row" style="margin-bottom:60px;">
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,137 @@
+<ion-view view-title="Order Download">
+    <ion-content class="login-body-color">
+        <div class="list list-gray-background">
+            <h4 style="color:white;float:left">Operator Name: {{operatorName}}</h4>
+            <!--<span class="service-centre-ionic-label">Service center</span>-->
+            <select class="input-dropdown-items select-items-table" ng-model="center" ng-change="getFacilities(center)" ng-disabled="centerFlag">
+                <option value="" selected>Service Center Select...</option>
+                <option data-ng-repeat="center in centers" >{{center.CenterName}}</option>
+            </select>
+        </div>
+
+        <div class="row responsive-sm">
+            <div class="col">
+                <div class="date-range">
+                    <span class="datepicker-ionic-label pull-left">Start Date:</span>
+                    <span class="datepicker-ionic pull-right">
+                        <ionic-datepicker date="StartDate" class="currentDate-ionic" min="minDate" max="maxDate" callback="startDateCallback">
+                            {{ StartDate | date:'MMMM/dd/yyyy' }}
+                            <i class="fa fa-calendar i-primary-calender" aria-hidden="true"></i>
+                        </ionic-datepicker>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="date-range">
+                    <span class="datepicker-ionic-label pull-left">End Date:</span>
+                    <span class="datepicker-ionic pull-right">
+                        <ionic-datepicker date="EndDate" class="currentDate-ionic" min="endminDate" max="maxDate" callback="endDateCallback">
+                            <!--callback="datePickerCallback"-->
+                            {{ EndDate | date:'MMMM/dd/yyyy' }}
+                            <i class="fa fa-calendar i-primary-calender" aria-hidden="true"></i>
+                        </ionic-datepicker>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row responsive-sm">
+            <div class="col">
+
+                <div class="list-content">
+                    <div class="list">
+                        <div class="item tcenter list-center-text">Facilites</div>
+
+                        <div class="item tcenter input-item-center">
+                            <input type="text" placeholder="Type to Search" ng-model="showSeachBox" id="click" class="input-search-ionic" ng-change="searchDropdown(showSeachBox)">
+                            <i class="fa fa-search primary-search-icon fa-2x" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="item tcenter input-item-center-2">
+
+                            <button ng-click="toggleDropDown()" style="width: 100% !important;" class="dropbtn">Please select...
+                                <i class="drop-padd fa fa-caret-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="dropdown-content" ng-class="{'show':isShowDD}">
+                                <div class="row" ng-click="setFacility(facilityObj.FacilityName,IncludePhonesChecked)" data-ng-repeat="facilityObj in facilities | filter:showSeachBox track by $index">
+
+                                    <div>
+                                        <a style="border-bottom:0px">{{facilityObj.FacilityName}}</a>
+                                    </div>
+                                    <!-- <div>
+        <ion-checkbox style="color:#9cb0c4" ng-click="IncludePhonesChecked=!IncludePhonesChecked" ng-checked="IncludePhonesChecked"> </ion-checkbox>
+   </div> -->
+                                    <!-- <input type="checkbox" ng-click="IncludePhonesChecked=!IncludePhonesChecked" ng-checked="IncludePhonesChecked"> -->
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="list-content-right">
+                    <div class="list">
+                        <div class="item tcenter list-center-text">Download List</div>
+                        <div ng-repeat="fac in facilityList track by $index" class="item tcenter item-scanlist item-scanlist-border">
+                            <div class="main-d-list">
+                                <!-- <span class="download-list-label">
+                                    <ion-checkbox style="color:#9cb0c4" ng-click="IncludePhonesChecked=!IncludePhonesChecked"
+                                        ng-checked="IncludePhonesChecked" ng-disabled="true"></ion-checkbox>
+                                </span> -->
+                                <span class="tcenter">{{fac.FacilityName}}</span>
+                                <span> <i style=" float: right; " class="fa fa-times-circle-o fa-2x " ng-click="removeFac($index) "></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tcenter" ng-click="getOrders()">
+                    <button class="button button-block button-primary-ionic">
+                        Download Orders
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
+<script>
+    $(document).ready(function () {
+        $(".s-hide").click(function () {
+            $(".sear-res-main").hide();
+        });
+        $("#show").click(function () {
+            $("p").show();
+        });
+    });
+
+    $(function () {
+        $("#click").on('click', function () {
+            console.log('clicked');
+            var $target = $("#ts");
+            var $clone = $target.clone().removeAttr('id');
+            $clone.val($target.val()).css({
+                overflow: "auto",
+                position: 'absolute',
+                'z-index': 999,
+                left: $target.offset().left,
+                top: $target.offset().top + $target.outerHeight(),
+                width: $target.outerWidth()
+            }).attr('size', $clone.find('option').length > 10 ? 10 : $clone.find('option').length).change(
+                function () {
+                    $target.val($clone.val());
+                }).on('click blur keypress', function (e) {
+                if (e.type !== "keypress" || e.which === 13)
+                    $(this).remove();
+            });
+            $('body').append($clone);
+            $clone.focus();
+        });
+    });
+</script>

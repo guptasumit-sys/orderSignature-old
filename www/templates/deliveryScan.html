@@ -1,0 +1,43 @@
+<ion-view view-title="Delivery Scan">
+    <ion-content class="login-body-scan" ng-init="focus=false">
+        <div class="orderList-border" >
+          
+            <div class="row">
+                <div class="col col-100 col-responsive-20">
+                    <input placeholder="Order Receipt" tabindex="0" type="text" style="margin-top:20px;" my-enter="getOrder(false);setfocus()" ng-model="deliveryId" ng-change="setfocus()" ng-focus="focus=true;orderId=''" class="orderList-searchInput" id="orderScan" autofocus>
+                </div>
+
+            </div>
+            <div class="row">  
+                <div class="col">
+                    <!-- <label class="label-text" ng-show="!focus">Please first tap Order Receipt.</label> -->
+                    <label class="label-text" >Please scan the receipt barcode and select GO to display the order.</label>
+                </div>
+            </div>
+            
+        
+            <div class="row">
+                <div class="col text-center">
+                    <button class="button orderList-btn-search orderList-btn-Go"  ng-click="getOrder(false);deliveryId='';setfocus()">Go</button> 
+                </div>
+            </div>   
+            
+
+            <div class="row">
+                <div class="col text-center">
+                    <button class="button orderList-btn-search orderList-btn-Clear"  ng-click="deliveryId='';setfocus()">Clear</button>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button class="button orderList-btn-Cancel"  ng-click="getOrder(deliveryId,true);"> Cancel </button>
+                </div>
+            </div>
+            <div class="row deliveryScan-row">
+                <div class="barcode-scan tcenter"></div>
+            </div>
+        </div> 
+        
+
+    </ion-content>
+</ion-view>

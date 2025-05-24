@@ -1,0 +1,95 @@
+<ion-view view-title="Credit List">
+
+       
+        <div class="row row-fixedposition row-position">
+    
+            <div class = "col col-80 col-responsive-20">
+                <input type="text" class="orderlist-search-input">
+            </div>
+            
+            <div class = "col col-20 col-responsive-20">
+                <button class="button button-block orderlist-btn-search">
+                    Search
+                </button>     
+            </div>
+         
+
+        </div>
+
+    <div class="login-body-color">
+
+
+
+
+
+
+
+
+        <div class = "row row-padd orderlist-rowfixed main-div-list">
+        <div class = "col tcenter col-25 border-column no-border top-border heading-row">Order ID</div>
+        <div class = "col tcenter col-25 border-column no-border top-border heading-row">Resident</div>
+        <div class = "col tcenter col-25 border-column no-border top-border heading-row">Location</div>
+        <div class = "col tcenter col-25 border-column top-border heading-row">Re Delivery List</div>
+
+        
+        </div>
+
+<ion-content>
+<div class="creditlist-columns">
+        <div class = "row row-padd" ng-repeat="credit in creditList">
+        <div class = "col tcenter col-25 border-column no-border row-fourth-text">{{credit.OrderId}}</div>
+        <div class = "col tcenter col-25 border-column no-border row-fourth-text">{{credit.Resident}}</div>
+        <div class = "col tcenter col-25 border-column no-border row-fourth-text">{{credit.Location}}</div>
+        <div class = "col tcenter col-25 border-column row-fourth-text">{{credit.CreditItems}}</div>
+
+        
+        </div>
+
+        
+        
+</div>
+</ion-content>
+ 
+
+
+
+
+<!--<div class="row responsive-sm orderlist_row tabel-responsive">
+
+<table class="rwd-table orderlist-responsive-table">
+  <tr class="order-headings">
+    <th>Order ID</th>
+    <th>Resident</th>
+    <th>Location</th>
+    <th>Item Qty</th>
+  </tr>
+ 
+
+    <tr class="orderlist-columns row-fourth-text">
+    <td data-th="Movie Title">American Graffiti</td>
+    <td data-th="Genre">Comedy, Drama</td>
+    <td data-th="Year">1973</td>
+    <td data-th="Gross">$115,000,000</td>
+  </tr>
+
+
+    <tr class="orderlist-columns row-fourth-text">
+    <td data-th="Movie Title">American Graffiti</td>
+    <td data-th="Genre">Comedy, Drama</td>
+    <td data-th="Year">1973</td>
+    <td data-th="Gross">$115,000,000</td>
+  </tr>
+
+    <tr class="orderlist-columns row-fourth-text">
+    <td data-th="Movie Title">American Graffiti</td>
+    <td data-th="Genre">Comedy, Drama</td>
+    <td data-th="Year">1973</td>
+    <td data-th="Gross">$115,000,000</td>
+  </tr>
+
+</table>
+</div>-->
+
+
+    </div>
+</ion-view>

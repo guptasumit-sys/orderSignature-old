@@ -1,0 +1,1392 @@
+/* General
+==================================*/
+p{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+h2{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+td{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+th{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+h3{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+h4{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+
+div{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+option{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 0 1px 0px #000;
+    font-size: 42px;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.val-popup .popup .popup-buttons{
+background-color: #ededed !important;
+}
+.list-position {
+    position: absolute;
+    right: 48px;
+    top: 25px;
+}
+    
+/*help*/
+
+.help-ver-info{
+    background: #9fb1c5;
+    text-align: center;
+}
+
+.help-ver-info li{
+    color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 8px 26px;
+}
+
+.help-ver-info li:last-child{
+    border-bottom: 0px solid #eee;
+}
+
+.footer-info {
+    color: #5a5a5a;
+    font-size: 13px;
+    margin-top: 95px;
+}
+/*download-list-label*/
+.download-list-label label{float: left;min-height:0 !important;
+    display: inline;
+    width: auto;}
+
+.datepicker-modal-buttons{
+    clear: both !important;
+    display: inline-block !important;
+    width: 100% !important;
+    margin-top: 15px !important;
+}
+
+.datepicker-cancel-js{
+    float: left !important;
+    display: inline !important;
+    background: #bebebe !important;
+    color: #ffffff !important;
+    width: 50% !important;
+}
+
+.datepicker-ok-js{display: inline !important;}
+
+/* Utilities
+==================================*/
+.title-bordered {
+    border-top: solid 2px #bbb;
+    padding-top: 30px;
+}
+
+p {
+    color: #555;
+    margin: 0 0 25px;
+}
+
+.scroll {
+    height: 100%;
+}
+
+
+/* Menu
+==================================*/
+.menu .bar.bar-header.expanded {
+    transition: all .5s ease-in-out;
+}
+
+.menu-open .bar.bar-header.expanded {
+    background-color: #222;
+}
+
+.menu h2 {
+    bottom: 0;
+    font-size: 18px;
+    left: 16px;
+    position: absolute;
+}
+
+.menu .avatar {
+    height: 88px;
+    width: 88px;
+}
+
+.menu.menu-left * {
+    font-weight: bold;
+}
+
+.menu-open .ion-navicon {
+    transform: rotate(-360deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-open .ion-navicon:before {
+    content: "\f2ca";
+}
+
+
+/* Login
+==================================*/
+.app-icon {
+    background-color: #fff;
+    background: url('../img/crown.jpg') center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 125px;
+    margin: 0 auto;
+    width: 125px;
+}
+
+.social-login {
+    position: fixed;
+    bottom: 0;
+}
+
+
+/*Login section css starts*/
+
+.login-body{
+background: url('../img/bg-main.jpg') repeat;
+}
+.login-form input{background: #ffffff;color: #000000;letter-spacing: 0;}
+.login-form label {margin:0}
+.login-form input input.used~.input-label, .item-md-label input:focus~.input-label{color: #375090;}
+.login-form  .input-label{color: #375090;letter-spacing: 0;font-weight: 500;}
+.login-form .highlight-balanced {background: #364f8e;}
+.login-form .highlight-energized{background: #364f8e;}
+.button-primary{background: #364f8e !important;color:#ffffff !important;font-weight: 500 !important;padding: 0 4.5rem !important;}
+.button-primary:hover{background:#69849e !important;color:#ffffff !important;}
+/*Login section css ends*/
+.search-inn li {
+    display: inline-block;
+    float: left;
+}
+.search-inn-mm{width:100%;}
+.searchtxt-rm{width:96.8% !important;}
+.search-inn-mm-btn{
+    background: #8595a5;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 34px;
+}
+
+/*Dashboard section css starts*/
+
+.main-header-bar{
+    background: #e7ecf1 !important;
+    color:#949494 !important;
+}
+
+.bar-icon-btn{
+    background: #9cb0c4 !important;
+}
+
+.main-header-bar .header-item{
+    font-weight: 300 !important;
+}
+
+.container-dashboard {
+    max-width: 100%;
+    margin: 0px 48px;
+}
+.order-item {
+    text-align: center;
+    margin: 0 auto;
+    height: 300px;
+    background: #768ea5;
+}
+
+.order-item i {
+    color: #ffffff;
+    position: relative;
+    top: 70px;
+}
+
+.orderlist-hide-rows{
+    display: none;
+}
+
+.order-item h3{
+    color:#ffffff;
+    font-weight: 600;
+}
+
+.i-arrow-down {
+    background: #9cb0c4;
+    border-radius: 100%;
+    padding: 10px 20px;
+}
+
+.i-barcode {
+    color: #000 !important;
+    border: 6px solid #000;
+    padding: 10px 20px 0px 20px;
+    border-radius: 30px;
+}
+
+.order-list {
+    min-height: 200px;
+}
+
+.order-list-row{
+    padding:200px 0px;
+}
+
+.select-item-list {
+    top:50px;
+}
+
+
+.i-primary-delivery{
+    color: #474a56 !important;
+}
+
+
+
+.select-item-list select {
+    border: 1px solid #949494;
+    background: transparent;
+    line-height: 1;
+    width: 200px;
+    padding: 14px 20px 16px 16px !important;
+    direction: ltr !important;
+    height: 47px;
+}
+
+.col-orderlist{
+
+    padding-right: 0px !important;
+}
+
+.col-orderlist-padd{
+    padding-left: 0px !important;
+}
+
+.order-list-columns{
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto; 
+   padding-bottom: 0px !important;
+}
+
+
+
+
+/*Dashboard section css End*/
+
+
+/*menu section css starts*/
+
+.has-expanded-header {
+  top: 0px!important;
+}
+
+.side-menu-list{
+    background: #fff !important;
+}
+
+.menu-list-color label {
+    color: #949494;
+    font-size: 16px;
+    position: relative;
+    top: -3px;
+}
+
+.menu-list-background {
+    background: #9cb0c4;
+    text-align: center !important;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+.menu-list-color {
+    border-bottom: 1px solid #949494 !important;
+    width: 240px;
+    margin: 0 auto;
+}
+
+
+.menu-list-color i{
+    color:#727272;
+    padding-right: 10px;
+}
+
+
+.menu-list-color_hide label {
+    color: #d3d3d3;
+    font-size: 16px;
+    position: relative;
+    top: -3px;
+}
+
+.menu-list-background_hide {
+    background: #9cb0c4;
+    text-align: center !important;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+.menu-list-color_hide {
+    border-bottom: 1px solid #d3d3d3 !important;
+    width: 240px;
+    margin: 0 auto;
+}
+
+
+.menu-list-color_hide i{
+    color: #d3d3d3;
+    padding-right: 10px;
+}
+
+
+.img-offline {
+    width: 32px;
+    vertical-align: middle;
+    position: relative;
+    left: -5px;
+}
+
+.offline-label{
+    top:2px !important;
+}
+
+.menuItemEnabled{
+    color:#727272 !important;
+}
+.menuItemDisabled{
+    color:#B9B9B9 !important;
+    
+}
+
+
+/*menu section css ends*/
+
+
+
+/*Download section css starts*/
+
+.select-items-table{
+    height: 35px;
+}
+
+
+
+.label-item-width {
+    width: 320px;
+    float: right;
+}
+.input-label-text {
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+
+.list-gray-background {
+    background: #9cb0c4;
+    padding: 5px 0px;
+    text-align: right !important;
+    float: right;
+    width: 100%;
+}
+
+.input-dropdown-items {
+    width: 500px;
+    direction: ltr !important;
+    max-width: 100% !important;
+    margin-right: 10px;
+    color: #949494 !important;
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+.list-center-text {
+    background: #9cb0c4;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;  
+    margin: -1px 0px;
+}
+
+.list-content {
+    background: #fff;
+    min-height: 415px;
+}
+
+.list-content-right {
+    background: #fff;
+    min-height: 300px;
+}
+
+
+.input-search-ionic {
+    width: 100%;
+    border: 2px solid #a1a1a1 !important;
+    border-radius: 10px;
+    padding-left: 20px !important;
+    height: 50px !important;
+    padding-right: 40px;
+}
+
+.input-item-center {
+    padding: 10px 0px !important;
+    margin: 0;
+}
+
+.input-item-center-2{
+    padding: 0px 0px 10px 0px  !important;
+    margin: 0;    
+}
+
+.primary-search-icon {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    color: #9c9c9c !important;
+    
+}
+
+.scan-item-list{
+    width:100%;
+    border: 2px solid #a1a1a1 !important;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #949494;
+}
+
+.item-scanlist {
+    padding: 19.3px;
+    border: 2px solid #949494 !important;
+    border-bottom: 0px !important;
+    font-size: 16px;
+    font-weight: bold;
+    color: #949494;
+    margin:0px;
+}
+
+.item-scanlist-border{
+     border-bottom: 1px solid #949494 !important;   
+}
+
+.datepicker-balanced-light {
+    background-color: #5d7b9d !important; 
+}
+
+.datepicker-balanced {
+    background-color: #5d7b9d !important; 
+}
+
+.datepicker-selected {
+    background-color: #5d7b9d !important; 
+    color:#fff !important;
+}
+
+.datepicker-color-balanced-light {
+    color: #5d7b9d !important; 
+}
+
+.datepicker-ionic {
+    display: inline-flex;
+    width: 87%;
+}
+
+.text-dec{
+    text-decoration: underline;
+    color: #5d7b9d !important;
+}
+.date-range {
+    margin-bottom: 0px;
+}
+.service-centre-ionic-label {
+    font-size: 18px;
+        font-weight: bold;
+	   color: #fff;
+    min-width: 103px;
+    margin-top: 5px;}
+
+.datepicker-ionic-label {
+    font-size: 18px;
+        font-weight: bold;
+	   color: #949494;
+    min-width: 103px;
+    margin-top: 5px;}
+
+.currentDate-ionic {
+    width: 100%;
+    border: 1px solid #949494;
+    padding: 10px;
+    color: #949494;
+    font-size: 16px;
+}
+
+.button-primary-ionic {
+    background: #5d7b9d !important;
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: bold;
+    width: 300px !important;
+    height: 60px;
+    max-width: 100% !important
+}
+
+.i-primary-calender{
+    float: right;
+    color:#949494;
+}
+
+
+
+/*Download section css end*/
+
+
+/*Orderlist section css start*/
+
+.main-div-list-2{
+    margin-top: 0px;
+}
+
+.orderlist-rowfixed {
+    z-index: 99999;
+}
+
+.table-listData {
+    position: relative;
+    top: 127px;
+}
+
+.table-datalist{
+    top:60px;
+    position: relative;
+}
+
+
+.login-body-color{
+    background: #f2f2f2 !important;
+}
+
+.orderlist-responsive-table{
+    width:100%;
+
+}
+
+.orderlist_row {
+    padding: 10px !important;
+    margin-bottom: 30px;
+}
+
+.order-headings th{
+    /* font-size: 16px; */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.order-headings{
+    background: #9cb0c4;
+    color: #fff;  
+}
+
+.orderlist-search-input{
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #9c9c9c !important;
+}
+.order-headings th{
+    padding:30px 0px !important;
+   border: 2px solid #949494 !important;  
+}
+
+.orderlist-columns td{
+    padding:30px 0px !important;
+    border-bottom: 2px solid #949494 !important;
+    border-left: 2px solid #949494 !important; 
+    border-right: 2px solid #949494 !important;
+    font-size: 16px;   
+}
+
+.table-colored-row{
+    background: #99ff33;
+}
+
+.orderlist-responsive-table tr{
+    text-align: center !important;
+}
+
+
+.order-btns{
+    text-align: center;
+}
+
+.orderList-text {
+    font-size: 26px;
+    font-weight: bold;
+    color: #797979;
+    margin: 15px 0px 3px 0px !important;
+}
+
+.orderList-btn-Go {
+    margin-top:20px; 
+    width:300px; 
+    background-color:#22b14c;
+    height:85px;
+    font-size: 15px;
+    font-size: 30px;
+}
+
+.orderList-btn-Clear {
+    margin-top:20px; 
+    width:300px; 
+    background-color:#efe4b0;
+    color:gray;
+    height:75px;
+    font-size: 25px;
+}
+
+.orderList-btn-Cancel {
+    margin-top:20px; 
+    width:300px; 
+    background-color:#ff0000; 
+    color:aliceblue;
+    height:85px;
+    font-size: 25px;
+}
+
+.orderList-border {
+    border: 5px solid #7d91a5 !important; height:auto; min-height: 93vh; max-height: 170vh;
+}    
+
+.orderList-searchInput {
+    width: 100%;
+    border: 2px solid #949494 !important;
+    padding-left: 20px !important;
+    height: 50px !important;
+    font-size: 18px !important;
+}
+.orderlist-btn-search {
+    margin: 0px !important;
+    background: #5d7b9d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.orderlist-btn-search:hover {
+    color: #fff !important;
+
+}
+
+.border-column{
+    border-bottom:1px solid #949494;
+    border-left:1px solid #949494;
+    border-right:1px solid #949494;
+    padding:25px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.top-border{
+    border-top:1px solid #949494;
+}
+
+
+.no-border{
+    border-right:0px;
+}
+.ordr-lst{
+           margin-top: -10px;
+}
+.heading-row{
+    background: #9cb0c4;
+    color: #fff;
+
+}
+
+.main-div-list {
+    margin-top: 44px;
+}
+
+.bg-green{
+    background: #99ff33;
+}
+
+.bg-yellow{
+    background: #ffff00;
+}
+
+.bg-white{
+    background: #fff;
+}
+
+.row-padd{
+    padding-left:10px !important;
+    padding-right:10px !important;
+}
+
+.row-fixedposition {
+    position: fixed;
+    top: 40px;
+    z-index: 1;
+    background: #fff;
+}
+
+.orderlist_row {
+    padding: 10px !important;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.row-fixed-btn {
+    position: fixed;
+    top: 40px;
+    z-index: 1;
+}
+
+.row-label-message{
+    position: absolute;
+    top: 110px;
+}
+.row-label-button{
+    position: absolute;
+    top: 152px;
+}
+
+.label-text{
+    color: #70767b;
+}
+
+
+/*Orderlist section css end*/
+
+
+
+
+
+/*OrderDetails section css start*/
+
+.order_details {
+    background: #fff !important;
+    padding: 30px;
+}
+
+.orderdetails-text {
+    font-size: 26px;
+    font-weight: bold;
+    color: #797979;
+    margin: 15px 0px 15px 0px !important;
+}
+
+.order_details p{
+    color:#797979 !important;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.order_details {
+    background: #fff !important;
+    padding: 30px;
+    margin-top: 15px;
+}
+
+.order_detail-dropbox {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    /* font-weight: bold; */
+}
+
+.btn-signature {
+    /*width: 500px;*/
+    max-width: 100% !important;
+    margin: 25px auto 30px auto;
+    /* 80px */
+    height: 40px;
+    width:97vw;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    background: #5d7b9d !important;
+}
+
+.btn-bluebar {
+    /*width: 500px;*/
+    max-width: 100% !important;
+    margin: 25px auto 30px auto;
+    /* 80px */
+    height: 40px;
+    width:24vw;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    background: #5d7b9d !important;
+}
+
+.btn-bar {
+    /*width: 500px;*/
+    max-width: 100% !important;
+    margin: 25px auto 30px auto;
+    height: 40px;
+    width:24vw;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.btn2grp, .btn1grp{
+    padding: 2px !important;
+}
+
+.btnBarGroup{
+    padding-left: 10px !important;
+}
+
+@media only screen and (orientation: portrait) {
+
+
+.btn-bar {
+    /*width: 500px;*/
+    max-width: 100% !important;
+    margin: 25px auto 30px auto;
+    height: 40px;
+    width:48vw;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.btn-bluebar {
+    /*width: 500px;*/
+    max-width: 100% !important;
+    margin: 25px auto 30px auto;
+    /* 80px */
+    height: 40px;
+    width:48vw;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    background: #5d7b9d !important;
+}
+
+.btnBarGroup{
+    padding-left: 0px !important;
+}
+
+}
+
+
+/*OrderDetails section css end*/
+
+
+
+/*resident signature section css start*/
+
+.officer-sign-btn{
+    background: #0033ff !important;
+    text-transform: capitalize;
+    font-weight: bold;    
+}
+
+
+
+.resident-background{
+    background: #636363 !important;
+    padding:0px !important;
+}
+
+.sign-canvas-width {
+    margin: 10% auto;
+    max-width: 100% !important;
+    background: #fff !important;
+    border: 5px solid #ff0000 !important;
+    max-height: 100% !important;
+}
+.sign-bar {
+    background: #9cb0c4;
+    height: 60px;
+}
+
+.sign-bar h3 {
+    float: left;
+    margin: 0px;
+    position: relative;
+    top: 13px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.main-bts-sign {
+    position: absolute;
+    right: 0px;
+    padding: 0px 10px;
+    top: 7px;
+}
+
+.accept-sign-btn{
+    background: #008000 !important;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.redo-sign-btn{
+    background: #ff9900 !important;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.cancel-sign-btn{
+    background: #ff0000 !important;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+/* resident signature section css end*/
+
+
+
+/* Credit List section css Start*/
+
+
+.creditList-rowFixed{
+    position: fixed;
+}
+
+.creditList-columns {
+    position: relative;
+    top: 127px;
+}
+
+/* Credit List section css end*/
+
+
+/* singleOrderDetails section css Start*/
+
+.columns-single td{
+    padding:20px !important;
+    border-bottom: 2px solid #949494 !important;
+    border-left: 2px solid #949494 !important; 
+    border-right: 2px solid #949494 !important;
+    font-size: 12px;   
+}
+
+.order-canvas-width{
+    margin: 70px auto 100px auto;
+    width: 1000px;
+    max-width: 100%;
+    height: 250px;
+    background: #fff;
+    border:5px solid #ff0000 !important;
+}
+
+
+/* singleOrderDetails section css end*/
+
+
+/* Delivery scan section css starts*/
+
+.barcode-scan {
+    width: 780px;
+    max-width: 100% !important;
+    margin: 100px auto;
+}
+
+.login-body-scan{
+    background: #d7d7d7;
+}
+
+.barcode-scan img{
+    border:5px solid #ff0000 !important;
+    width:100%;
+}
+
+.signature-btn{
+    margin: 0 auto;
+}
+
+.lightgreen{
+    background: lime !important;
+
+}
+.yellow{
+
+background: yellow !important;
+}
+
+.White{
+    background: white !important;
+}
+
+.lightblue{
+    background: lightblue !important;
+}
+
+.orange{
+    background: orange !important;
+}
+
+.delivery-primary-btn {
+    background: #ff0000 !important;
+    height: 80px;
+    width: 260px;
+    max-width: 100%;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.border-outer {
+    border: 5px solid #7d91a5 !important;
+    height: 80%;
+}
+
+.img-responsive{
+    background-image: url('../img/Delivery.png');
+    background-Size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*  Delivery scan section css end*/
+
+
+
+/*global classes starts*/
+
+.tcenter{text-align:center !important;}
+.tleft{text-align:left}
+.tright{text-align:right}
+.no-margin{margin:0 !important}
+.padding-l-r-16  {padding:0 16px}
+.padding-t-b-16  {padding:16px 0}
+.color-white{color:#000000}
+.link{text-decoration:underline}
+/*global classes ends*/
+
+.chap-search-result {
+  width: 25%;
+  z-index: 99999999999;
+  border-radius: 0 !important;
+  left: 0 !important;
+  background: #f5f5f5 !important;
+  border: #6193bd solid 1px !important;
+  box-shadow: 1px 1px 5px #B5B5B5 !important;
+}
+
+
+
+.chap-search-result:after{display: none !important;}
+.trans-item-bord p {
+    /*border-right: 1px solid #939393;*/
+    margin: 0;
+    /*padding: 12px;*/
+        padding: 12px 0px 12px 5px;
+    border-bottom: 1px solid #d3d3d3;
+}
+.input-dropdown {
+  position: absolute;
+  background: grey;
+  border: solid 1px #000;
+  z-index: 1001;
+  overflow: visible;
+  margin-left:65px;
+}
+
+.input-dropdown-menu {
+  display:none;
+}
+
+
+
+.chap-search-result li{
+    width: 100%;
+    display: block;
+    padding-bottom: 8px;
+  border: 0 !important;
+}
+
+.chap-search-result li span {
+  color: #B9B9B9;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-bottom: 1px !important;
+  float: left;
+}
+
+.chap-search-result li a {
+  color: #22669F;
+  border-bottom: 1px #B9B9B9 solid;
+  min-width: 100%;
+  font-size: 16px;
+  padding-left: 10px;
+  float: left;
+  padding-bottom: 3px;
+  cursor: pointer;
+}
+
+.option-color {
+        background-color: #9cb0c4;
+        color: #ffffff;
+    }
+
+
+/*=====================Canvas css =======================*/
+
+.primary-pencil-icon {
+    
+    position: relative;
+    top: 9px;
+    left: 12px;
+}
+
+.pencil-Color-list li {
+    list-style: none;
+    position: relative;
+    left: 32%;
+}
+.pencil-Color-list {
+    text-align: right;
+    background: #fff;
+    padding: 1px 0px 1px 0px;
+    position: relative;
+    left: 92.5%;
+    top: 11px;
+    width: 50px;
+    border-radius:5px; 
+}
+
+.first-color-list {
+    padding: 1px 9px;
+    width: 10px;
+    height: 15px;
+    margin-top: 10px
+}
+
+.second-color-list{
+    padding: 1px 9px;
+    width: 10px;
+    height: 15px;
+    margin-top: 10px
+
+}
+
+.third-color-list{
+    padding: 1px 9px;
+    margin-top: 10px;
+    width: 10px;
+    height: 15px;
+    margin-bottom: 10px
+}
+
+.m-signature-pad {
+  position: absolute;
+  font-size: 10px;
+  width: 700px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset;
+  border-radius: 4px;
+}
+
+/*.m-signature-pad:before, .m-signature-pad:after {
+	position: absolute;
+  z-index: -1;
+  content: "";
+	width: 40%;
+	height: 10px;
+	left: 20px;
+	bottom: 10px;
+	background: transparent;
+	-webkit-transform: skew(-3deg) rotate(-3deg);
+	-moz-transform: skew(-3deg) rotate(-3deg);
+	-ms-transform: skew(-3deg) rotate(-3deg);
+	-o-transform: skew(-3deg) rotate(-3deg);
+	transform: skew(-3deg) rotate(-3deg);
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.m-signature-pad:after {
+	left: auto;
+	right: 20px;
+	-webkit-transform: skew(3deg) rotate(3deg);
+	-moz-transform: skew(3deg) rotate(3deg);
+	-ms-transform: skew(3deg) rotate(3deg);
+	-o-transform: skew(3deg) rotate(3deg);
+	transform: skew(3deg) rotate(3deg);
+}*/
+
+.m-signature-pad--body {
+    position: relative;
+    border: 1px solid #f4f4f4;
+    margin: 100px auto;
+}
+
+/*.canvas-row{
+    position: absolute;
+    bottom: 13%;
+}*/
+
+
+.m-signature-pad--body
+  canvas {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.02) inset;
+  }
+
+/*===============End canvas css ========*/
+
+.button-default{
+background: #364f8e !important;
+    color: #ffffff !important;
+    font-weight: 500 !important;
+  
+}
+.popup-buttons .button{
+margin-right: 3px !important;
+}
+
+.popup-container .popup {
+    width: 305px !important;
+}
+/*===========Help btns=========*/
+
+    .btn-next { 
+        position: absolute;
+        top: 50%;
+        left: 95%;
+        color: #ffffff;
+        font-size: 30px;
+    }
+    
+    .btn-prev {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        color: #ffffff;
+        font-size: 30px;
+    }
+    
+    .btn-close {
+        position: absolute;
+        top: 2%;
+        left: 95%;
+        color: #ffffff;
+        font-size: 30px;
+    }
+    
+    .btn-got-it {
+        top: 89% !important;
+    left: 66% !important;    
+    }
+/*=======Facility dropdown=========*/
+.drop-padd{
+    padding-left: 8%;
+}
+.dropbtn {
+    background-color: #ffffff;
+    color: #1f1f1f;
+    padding: 16px;
+    font-size: 16px;
+        width: 250px;   
+    cursor: pointer;
+    border: 1px solid #949494;
+}
+    .drop-btn-main{float: right;}
+    .item-select:after{display:none !important;}
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+            background-color: #ffffff;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: inherit;
+        background-color: #f9f9f9;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 9999999999;
+      
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid #9cb0c4;
+    }
+
+    .dropdown a:hover {
+        background-color: #f1f1f1
+    }
+
+    .show {
+        display: block;
+    }
+.sync-popup .popup .popup-body{
+    height: 80% !important;
+}
+.sync-popup .popup{
+    width: 90% !important;
+    height: 90% !important;
+}
+
+.buttonPopup{
+    color: white;
+    background-color: #364f8e;
+    font-size: 12px;
+    /* text-align: left; */
+}
+
+.popupStyle{text-align: right;position: absolute;top: 3px;right: 10px;z-index:1000;color: #029dff !important;padding: 0px !important;background-color: transparent !important; }
+
+.fa-lg{
+    color:red;
+    font-size:2em !important;
+}
+.barcodescan{
+    width: 50px;
+}
+
+.orderButtonClose{
+    margin: -10px !important;
+}

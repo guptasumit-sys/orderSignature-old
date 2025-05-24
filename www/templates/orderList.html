@@ -1,0 +1,150 @@
+<ion-view view-title="Order List">
+        <style>
+              ul.list-unstyled {
+                height: 20px;
+                width: 80px;
+                border: 1px #000 solid;
+                list-style-type: none;
+                float: right;
+    margin-right: 31px;
+                }
+
+                ul.list-unstyled li {
+                        padding: 1px 10px;
+                        z-index: 2;
+                        z-index: 9999999999999999;
+                        position: relative;
+                        color: #000000;
+                    }
+
+                    ul.list-unstyled li:not(.init) {
+                        float: left;
+                        width: 100px;
+                        display: none;
+                        background: #ddd;
+                        color: #606366;
+                    }
+
+                ul.list-unstyled li:not(.init):hover,
+                ul.list-unstyled li.selected:not(.init) {
+                        background: #9cb0c4;
+                }
+
+                li.init {
+                        cursor: pointer;
+                }
+
+                a#submit {
+                        z-index: 1;
+                }
+        </style>
+        <ion-content class="login-body-color">
+                <div class="row row-fixedPosition">
+                        <div class="col col-responsive-20">
+                                <ul class="search-inn">
+                                        <li class="search-inn-mm" ng-class="searchText?'searchtxt-rm':''">
+                                                <input type="text" placeholder="Search" ng-model="searchText" class="orderlist-search-input" />
+                                        </li>
+                                        <li>
+                                                <div class="search-inn-mm-btn">
+                                                        <i ng-show="searchText" class="fa fa-times-circle-o" ng-click="searchText = ''" aria-hidden="true"></i>
+                                                </div>
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="row row-padd orderlist-rowfixed main-div-list-2">
+                        <!--<div class="col tcenter col-25 border-column no-border top-border heading-row">Order ID</div>-->
+                        <div class="col tcenter col-50 border-column no-border top-border heading-row">Resident</div>
+                        <div class="col tcenter col-50 border-column no-border top-border heading-row">
+                               
+                                <!-- <select ng-model="locationGroup"  ng-change="filterOrderList(locationGroup)" style="padding-left:1px;padding-right:1px">
+                                        <option value="" ng-hide="true">All</option>
+                                        <option ng-value="All">All</option>
+                                        <option ng-repeat="order in location"  ng-value="order.loc">{{order.loc}}</option>
+                                </select> -->
+
+
+                                <!-- <button class="btn btn-primary" type="button" style="width:20px" ng-click="toggleLocation = !toggleLocation" >{{locationGroup}}</button> -->
+
+                                <!-- Dropdown Structure -->
+                                <!-- <ul ng-show="toggleLocation" class='dropdown-content'>
+                                                <li ng-click="filterOrderList('All')"><a>All</a></li>
+                                                <li ng-repeat="order in location"  ng-click="filterOrderList(order.loc)"><a>{{order.loc}}</a></li>
+                                </ul> -->
+                                <ul class="list-unstyled">
+                                        <li class="init">{{locationGroup}}</li>
+                                        <li ng-click="filterOrderList('All')">
+                                                <a>All</a>
+                                        </li>
+                                        <li ng-repeat="order in location" ng-click="filterOrderList(order.loc)">
+                                                <a>{{order.loc}}</a>
+                                        </li>
+                                </ul>
+                                <span style="margin-left: 27%;">Location</span> 
+
+                        </div>
+                        <!--<div class="col tcenter col-33 border-column top-border heading-row">DownlaodSeq</div>-->
+                </div>
+
+                <div class="creditlist-columns ordr-lst">
+                        <div class="row row-padd" ng-repeat="order in orderList | filter:searchText track by $index">
+                                <!--<div class="col tcenter col-25 border-column no-border row-fourth-text  text-dec" ng-class="order.isOrdered === '1'?'lightgreen':order.isOrdered === '2'?'yellow':'White'">{{order.OrderID}}</div>-->
+                                <!-- isOrderRedelivered -->
+                                <!-- <div ng-if="order.isOrdered == '1' && order.isRedeliver != '1'" class="col tcenter col-50 border-column no-border row-fourth-text" ng-class="order.isOrdered == '1'?'lightgreen':order.isOrdered == '2'?'yellow':'White'">{{order.ResID}}</div>
+                                <div ng-if="order.isOrdered != '1' && order.isRedeliver != '1'" class="col tcenter col-50 border-column no-border row-fourth-text text-dec" ng-click="goToOrderDetails(order.ResID)" ng-class="order.isOrdered == '1'?'lightgreen':order.isOrdered == '2'?'yellow':'White'">{{order.ResID}}</div>
+                                <div ng-if="order.isRedeliver != '1'" class="col tcenter col-50 border-column no-border row-fourth-text" ng-class="order.isOrdered == '1'?'lightgreen':order.isOrdered == '2'?'yellow':'White'">{{order.Location}}</div> -->
+
+                                <div ng-if="order.isCredit == '0' && order.isRedeliver == '0' && order.isOrderRedelivered == '0' && order.isOrdered == '0'"
+                                        class="col tcenter col-50 border-column no-border row-fourth-text text-dec" ng-click="goToOrderDetails(order.ResID,order.DeliveryID)"
+                                        ng-class="true?'White':''">{{order.ResID}}</div>
+                                <div ng-if="order.isCredit == '0' && order.isRedeliver == '0' && order.isOrderRedelivered == '0' && order.isOrdered == '0'"
+                                        class="col tcenter col-50 border-column no-border row-fourth-text" ng-class="true?'White':''">{{order.Location}}</div>
+
+                                <!-- <div ng-if="order.isCredit == '1' && order.isRedeliver == '0' && order.isOrdered == '2'" class="col tcenter col-50 border-column no-border row-fourth-text text-dec" ng-click="goToOrderDetails(order.ResID,order.DeliveryID)" ng-class="true?'yellow':''">{{order.ResID}}</div>
+                                <div ng-if="order.isCredit == '1' && order.isRedeliver == '0' && order.isOrdered == '2'" class="col tcenter col-50 border-column no-border row-fourth-text" ng-class="true?'yellow':''">{{order.Location}}</div> -->
+
+                                <div ng-if="order.isCreditOnce == '1' && order.isRedeliver != '1' && order.isOrderRedelivered != '2'" class="col tcenter col-50 border-column no-border row-fourth-text text-dec" ng-click="goToViewOrders(order.ResID,order.DeliveryID)"
+                                        ng-class="true?'yellow':''">{{order.ResID}}</div>
+                                <div ng-if="order.isCreditOnce == '1' && order.isRedeliver != '1' && order.isOrderRedelivered != '2'" class="col tcenter col-50 border-column no-border row-fourth-text" ng-class="true?'yellow':''">{{order.Location}}</div>
+
+
+                                <div ng-if="order.isCredit == '0' && order.isRedeliver == '1' && order.isOrderRedelivered == '2'" class="col tcenter col-50 border-column no-border row-fourth-text text-dec"
+                                        ng-click="goToViewOrders(order.ResID,order.DeliveryID)" ng-class="true?'lightblue':''">{{order.ResID}}</div>
+                                <div ng-if="order.isCredit == '0' && order.isRedeliver == '1' && order.isOrderRedelivered == '2'" class="col tcenter col-50 border-column no-border row-fourth-text"
+                                        ng-class="true?'lightblue':''">{{order.Location}}</div>
+
+                                <div ng-if="order.isRedeliver == '1' && order.isCredit == '0'  && order.isOrderRedelivered == '0' && order.isOrdered == '0'"
+                                        class="col tcenter col-50 border-column no-border row-fourth-text text-dec" ng-click="goToOrderDetails(order.ResID,order.DeliveryID)"
+                                        ng-class="true?'lightblue':''">{{order.ResID}}</div>
+                                <div ng-if="order.isRedeliver == '1' && order.isCredit == '0'  && order.isOrderRedelivered == '0' && order.isOrdered == '0'"
+                                        class="col tcenter col-50 border-column no-border row-fourth-text" ng-class="true?'lightblue':''">{{order.Location}}</div>
+
+                                <div ng-if="order.isCredit == '1' && order.isRedeliver == '1' && (order.isOrdered == '2' || order.isOrderRedelivered == '2')"
+                                        class="col tcenter col-50 border-column no-border row-fourth-text text-dec" ng-click="goToViewOrders(order.ResID,order.DeliveryID)"
+                                        ng-class="true?'orange':''">{{order.ResID}}</div>
+                                <div ng-if="order.isCredit == '1' && order.isRedeliver == '1' && (order.isOrdered == '2' || order.isOrderRedelivered == '2')"
+                                        class="col tcenter col-50 border-column no-border row-fourth-text" ng-class="true?'orange':''">{{order.Location}}</div>
+
+                                <div ng-if="order.isOrderRedelivered == '1' && order.isOrdered == '1' && order.isCreditOnce == '0'" class="col tcenter col-50 border-column no-border row-fourth-text text-dec"
+                                        ng-click="goToViewOrders(order.ResID,order.DeliveryID)" ng-class="true?'lightgreen':''">{{order.ResID}}</div>
+                                <div ng-if="order.isOrderRedelivered == '1' && order.isOrdered == '1' && order.isCreditOnce == '0'" class="col tcenter col-50 border-column no-border row-fourth-text"
+                                        ng-class="true?'lightgreen':''">{{order.Location}}</div>
+
+
+
+
+                                <!-- <div ng-if="order.isOrdered == '1'" class="col tcenter col-50 border-column no-border row-fourth-text" ng-class="order.isOrdered == '1' && order.isRedeliver != '1'?'lightgreen':order.isOrdered == '2' && order.isRedeliver != '1'?'yellow':order.isRedeliver == '1'?'lightblue':'White'">{{order.ResID}}</div> -->
+
+
+
+                                <!-- <div ng-if="order.isOrdered != '1' && order.isRedeliver != '1'" class="col tcenter col-50 border-column no-border row-fourth-text text-dec" ng-click="goToOrderDetails(order.ResID)" ng-class="order.isOrdered == '1' && order.isRedeliver != '1'?'lightgreen':order.isOrdered == '2' && order.isRedeliver != '1'?'yellow':order.isRedeliver == '1'?'lightblue':'White'">{{order.ResID}}</div>
+                                 -->
+
+                                <!--<div class="col tcenter col-33 border-column no-border row-fourth-text" ng-class="order.isOrdered === '1'?'lightgreen':order.isOrdered === '2'?'yellow':'White'">{{order.DownloadSeq}}</div>-->
+                                <!--<div class="col tcenter col-25 border-column no-border row-fourth-text" ng-class="order.isOrdered === '1'?'lightgreen':order.isOrdered === '2'?'yellow':'White'">{{order.itemCount}}</div>-->
+                        </div>
+                </div>
+        </ion-content>
+      
+</ion-view>

@@ -1,0 +1,45 @@
+<!--<ion-view view-title="Resident Signature">-->
+
+<!--<ion-pane>-->
+<ion-content class="has-header padding resident-background" scroll='false'>
+
+
+    <div class="row sign-bar">
+        <h3>
+            Order Receipt: {{orderReceipt}}
+        </h3>
+        <div class="main-bts-sign">
+            <!--<button class="button button-balanced officer-sign-btn primary-main-btns" ng-click="getSignature()"> get Signatures </button>-->
+            <!--<button class="button button-balanced officer-sign-btn primary-main-btns" ng-click="addSignature(true)"> Add Sign </button>-->
+            <button class="button button-balanced officer-sign-btn primary-main-btns ng-hide"> Officer Sign </button>
+            <button class="button button-balanced accept-sign-btn primary-main-btns" ng-click='saveSignatures()'> Accept </button>
+            <button class="button button-positive redo-sign-btn primary-main-btns resposive-main-btns" ng-click='clearCanvas()'> Redo </button>
+            <button class="button button-assertive cancel-sign-btn primary-main-btns resposive-main-btns" ng-click="goToOrderDetails(ResID,DeliveryID)" > Cancel </button> 
+            <!--ui-sref="app.dashboard"-->
+            <i class="fa fa-pencil fa-2x primary-pencil-icon ng-hide" ng-style="{'color': pencilColor}" ng-click="isShow = !isShow" style="padding-right: 12px" aria-hidden="true"></i>
+            <ul ng-show="isShow" class="pencil-Color-list">
+                <li ng-style="{'background-color': 'rgb(0, 0, 0)'}" ng-click="signPad('rgb(0, 0, 0)');isShow=false" class="first-color-list">
+                </li>
+                <li ng-style="{'background-color': 'rgb(66, 133, 244)'}" ng-click="signPad('rgb(66, 133, 244)');isShow=false" class="second-color-list">
+                </li>
+                <li ng-style="{'background-color': 'rgb(0,128,0)'}" ng-click="signPad('rgb(0,128,0)');isShow=false" class="third-color-list">
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div class="row canvas-sign">
+        <div id="signature-pad" class="m-signature-pad--body m-signature-pad">
+            <canvas></canvas>
+            
+           <canvas id='blank' style='display:none'></canvas>
+        </div>
+    </div>
+
+</ion-content>
+<!--</ion-pane>-->
+
+
+<!--</ion-view>-->

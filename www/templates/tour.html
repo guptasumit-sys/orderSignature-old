@@ -1,0 +1,7 @@
+<ion-content class="has-header padding resident-background" scroll='false'>
+    <img ng-src="{{image}}" on-swipe-left="next()" style="height: 100vh; width: 100%;" on-swipe-right="prev()">
+    <i class="btn-next fa fa-chevron-circle-right" ng-if="nextbtn" ng-click="next()">  </i>
+    <i class="btn-prev fa fa-chevron-circle-left" ng-if="prevbtn" ng-click="prev()">  </i>
+    <i class="btn-close fa fa-times-circle-o" ui-sref="app.help">  </i>
+    <button class="button button-stable button-primary btn-next btn-got-it" ng-if="gotItbtn" ui-sref="app.help">Got it </button>
+</ion-content>

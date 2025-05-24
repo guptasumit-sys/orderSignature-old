@@ -1,0 +1,24 @@
+<ion-view view-title="Help">
+    <ion-content class="login-body">
+        <div class="login-logo tcenter padding">
+            <img src="img/logo-login.png">
+        </div>
+        <div class="row responsive-sm">
+            <div class="col">
+                <ul class="help-ver-info">
+                    <li>App Name: Order Signature</li>
+                    <!--<li ng-click="goToLog()">App Version: {{appVersion}}</li>-->
+                    <li on-hold="goToLog()">App Version: {{appVersion}}</li>
+            </div>
+        </div>
+        <div class="padding tcenter">
+            <button class="button button-stable button-primary" ui-sref="appSign.tour">Getting Started</button>
+        </div>
+        <div class="footer-info tcenter">
+
+            Copyright © {{currentYear}} Trinityservicesgroup.com
+            <!--new Date().getFullYear();    ng-click="help('dashboard')"-->
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

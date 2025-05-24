@@ -1,0 +1,318 @@
+@media only screen and (max-width: 1851px){
+
+.datepicker-ionic {
+    width: 100%;
+    margin-bottom:10px !important;
+}
+
+/*.ordr-lst{
+        margin-top: 6.6%;
+}*/
+}
+
+
+@media only screen and (max-width: 1300px) and (min-width:768px){
+
+
+.order-list {
+    min-height: 185px;
+}
+
+.order-item h3 {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.orderlist-sec-hide-row{
+    margin-bottom: 50px;
+}
+
+.i-arrow-down {
+    padding: 10px 13px;
+}
+
+
+}
+
+@media only screen and (max-width: 567px){
+
+.order-item {
+    height: 300px;
+}
+
+.order-list {
+    min-height: 200px;
+}
+.order-list-columns {
+    padding: 0px;
+}
+
+.order-list-row {
+    padding: 80px 0px;
+}
+
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 568px){
+
+.orderlist-hide-rows{
+    display: block !important;
+}
+
+.orderList-show-row{
+    display: none !important;
+}
+
+.order-list-columns {
+    width: 20% !important;
+    float: left;
+    padding-left: 5px;
+}
+.order-item {
+    height: 240px;
+}
+.orderlist-hide-rows {
+    display: block !important;
+    margin-top: 125px !important;
+}
+
+.list-position {
+    right: 52px;
+    top: -53px;
+}
+
+.responsive-padd-0 {
+    padding-right: 5px !important;
+}
+
+.responsive-paddleft-0{
+    padding-left:0px !important;
+}
+
+.orderlist-hide-rows {
+    display: block !important;
+    margin-top: 70px !important;
+}
+
+.padding-left-0{
+    padding-left:0px !important;
+}
+
+}
+
+
+@media only screen and (max-width: 767px) and (min-width: 481px){
+
+.input-dropdown-items {
+    width: 250px;
+
+}
+
+}
+
+
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+
+.orderlist-sec-hide-row {
+    position: relative;
+    top: 0px;
+    margin-bottom: 60px;
+}
+
+.order-list {
+    min-height: 120px;
+}
+
+.order-item h3 {
+    position: relative;
+    top: 45px;
+}
+
+}
+
+
+
+
+@media only screen and (max-width: 767px) and (min-width: 568px){
+
+.orderlist-sec-hide-row {
+    position: relative;
+    top: -23px;
+    margin-bottom: 60px;
+}
+
+.order-list-columns {
+    width: 50% !important;
+    float: left;
+    padding-left: 5px;
+}
+.order-item {
+    height: 238px;
+}
+
+.order-list {
+    min-height: 150px;
+}
+
+.ordr-lst{
+        /*margin-top: 20.6%;*/
+}
+
+.button-primary-ionic {
+    background: #5d7b9d !important;
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: bold;
+    width: 250px !important;
+    height: 60px;
+    max-width: 100% !important
+}
+
+.order-item i {
+    color: #ffffff;
+    position: relative;
+    top: 50px;
+}
+
+}
+
+@media only screen and (max-width: 379px){
+
+.resposive-main-btns{
+    margin-top:10px;
+}
+
+.primary-main-btns{
+    width: 120px !important;   
+}
+
+.sign-bar {
+    height: 200px !important;
+}
+
+.sign-bar h3 {
+    top: 6% !important;
+}
+
+}
+@media only screen and (min-width: 1478px){
+
+.search-inn-mm{width:100%;}
+.searchtxt-rm{width:98% !important;}
+}
+
+@media only screen and (max-width: 767px){
+.search-inn-mm{width:100%;}
+.searchtxt-rm{width:94.6% !important;}
+.i-arrow-down {
+    background: #9cb0c4;
+    border-radius: 100%;
+    padding: 10px 13px;
+}
+
+.border-column {
+    padding: 25px 5px;
+    font-size: 13px;
+}
+
+.orderlist-sec-hide-row{
+    margin-bottom: 50px;
+}
+
+.orderlist-btn-search {
+    font-size: 11px;
+    padding: 0px !important;
+}
+
+.primary-main-btns{
+    width: 87px;
+    font-size: 13px;
+    padding: 0px !important;    
+}
+
+
+.sign-canvas-width {
+    height: 150px;
+}
+
+.sign-bar {
+    height: 160px;
+}
+
+
+.sign-bar h3 {
+    text-align: center;
+    width: 100%;
+    top: 20%;
+}
+
+.main-bts-sign {
+    top: 75px;
+    text-align: center;
+    width: 100%;
+}
+
+.barcode-scan {
+    margin: 60px auto;
+}
+
+.delivery-primary-btn {
+    margin-bottom: 70px; 
+}
+
+}
+
+
+@media only screen and (max-width: 480px){
+
+.main-orderList{
+    width:600px;
+}
+
+.input-dropdown-items {
+    width: 250px;
+
+}
+
+.tabel-responsive{
+    overflow-x: auto;
+}
+
+}
+
+
+.transparent {
+        background: transparent !important;
+    }
+    
+    .image-modal {
+        width: 100% !important;
+        height: 100%;
+        top: 0 !important;
+        left: 0 !important;
+    }
+    
+    .fullscreen-image {
+        max-width: 100%;
+        max-height: 100%;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        overflow: auto;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+    /* Fix modal backdrop for smaller devices */
+    
+    @media (max-width: 679px) {
+        .active .modal-backdrop-bg {
+            opacity: .5;
+        }
+        .modal-backdrop-bg {
+            -webkit-transition: opacity 300ms ease-in-out;
+            transition: opacity 300ms ease-in-out;
+            background-color: #000;
+            opacity: 0;
+        }
+    }
